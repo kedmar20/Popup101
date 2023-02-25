@@ -1,0 +1,11 @@
+<h1>Das ist Homepage</h1>
+
+<% if (user) { %>
+<p>Sie sind angemeldet:</p>
+<p></p>
+<p>User: <%- user.email %></p>
+<p>ID: <%- user._id %></p>
+<% } else { %>
+<p>Willkommen auf unserer Webseite. Das ist ein Buchkatalog.</p>
+<p>Registrieren Sie sich, um Ihr eigenes Buch hinzuzufügen!</p>
+<% } %>

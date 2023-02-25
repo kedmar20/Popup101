@@ -1,0 +1,24 @@
+<h1>Buchkatalog:</h1>
+<% if (user) { %>
+<a href="/admin/buecher/new" class="btn btn-success">Füge neues Buch hin!</a>
+<!-- --------------------- -->
+<% } %> <% buecher.forEach(book => { %>
+<div class="card bg-light mb-3">
+  <div class="card-body">
+    <p class="h3 mb-4"><%= book.name %></p>
+    <a href="/buecher/<%= book.slug %>" class="btn btn-primary">Überprüfen</a>
+    <% if (user) { %>
+
+    <a href="/admin/buecher/<%= book.slug %>/edit" class="btn btn-warning"
+      >Bearbeiten</a
+    >
+    <a
+      href="/admin/buecher/<%= book.slug %>/usun"
+      onclick="return confirm('Sind Sie sicher?')"
+      class="btn btn-danger"
+      >Löschen</a
+    >
+    <% } %>
+  </div>
+</div>
+<% }); %>

@@ -1,0 +1,46 @@
+<form method="POST">
+  <div class="mb-3">
+    <label for="" class="form-label">Buchtitel</label>
+    <input
+      type="text"
+      name="name"
+      value="<%= form.name %>"
+      class="form-control <%- errors?.name ? 'is-invalid' : '' %>"
+      required
+    />
+    <% if (errors?.name) { %>
+    <div class="invalid-feedback"><%= errors.name.message %></div>
+    <% } %>
+  </div>
+
+  <div class="mb-3">
+    <label for="" class="form-label">Slug</label>
+    <input
+      type="text"
+      name="slug"
+      value="<%= form.slug %>"
+      class="form-control <%- errors?.slug ? 'is-invalid' : '' %>"
+      required
+    />
+    <div class="form-text">Mindestens 3 Zeichen</div>
+    <% if (errors?.slug) { %>
+    <div class="invalid-feedback"><%= errors.slug.message %></div>
+    <% } %>
+  </div>
+
+  <div class="mb-3">
+    <label for="" class="form-label">Seitenzahl</label>
+    <input
+      type="number"
+      name="seitenzahl"
+      value="<%= form.seitenzahl %>"
+      class="form-control"
+    />
+  </div>
+
+  <button class="btn btn-primary"><%- buttonText %></button>
+</form>
+
+<% if (errors) { %>
+<div class="alert alert-danger mt-3">Korrigieren Sie die Daten im Formular</div>
+<% } %>

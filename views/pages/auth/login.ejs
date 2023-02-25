@@ -1,0 +1,30 @@
+<h1>Melden Sie sich an</h1>
+
+<form method="POST">
+  <div class="mb-3">
+    <label for="email" class="form-label">E-mail</label>
+    <input
+      type="email"
+      class="form-control"
+      name="email"
+      value="<%- form.email %>"
+      id="email"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Passwort</label>
+    <input
+      type="password"
+      class="form-control"
+      name="password"
+      id="password"
+      required
+    />
+    <% if (errors) { %>
+    <div class="alert alert-danger">Falsche E-Mail/Passwort</div>
+    <% } %>
+  </div>
+  <button class="btn btn-primary">Anmelden!</button>
+</form>
