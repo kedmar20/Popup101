@@ -1,4 +1,5 @@
 # node-MongoDB-Buchkatalog
+# Node.js Server Side Rendering (SSR) using EJS
 ## MVC Api (Model View Controller)
 ## nodeJS+Express+MongoDB+EJS
 
