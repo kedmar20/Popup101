@@ -7,7 +7,7 @@ A simple Buchkatalog app running on Node-Express own server.
 
 Connection with Mongo DB Atlas.
 
-deployment: https://node-mongodb-buchkatalog.herokuapp.com/ 
+deployment: https://node-mongodb-buchkatalog-production.up.railway.app/
 
 ### MVC Architectur: 
 - Modell + MongoDB
